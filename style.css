@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Outfit:wght@400;600&display=swap');
+
+:root{
+  --very-darkbluemain : hsl(217, 54%, 11%);
+  --very-darkbluecard : hsl(216, 50%, 16%);
+  --very-darkblueline : hsl(215, 32%, 27%);
+  --soft-blue : hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --white : hsl(0, 0%, 100%);
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--very-darkbluemain);
+}
+
+*{
+  margin: 0;
+}
+
+.header{grid-area: head;}
+.content{grid-area: content;}
+.priceinfo{grid-area: price;}
+.timeinfo{grid-area: time;}
+.hr{grid-area: line;}
+.footer{grid-area: footer;}
+
+
+.card{
+  max-width: 340px;
+  height: 560px;
+  display: grid;
+  grid-template-areas: 
+  'head head'
+  'content content'
+  'price time'
+  'line line'
+  'footer footer'
+  ;
+  margin: 0 auto;
+  background-color: var(--very-darkbluecard);
+  border-radius: .5rem;
+  color: var(--white);
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  padding: 1rem;
+}
+.header img{
+  width: 300px;
+  height: 300px;
+  border-radius: .5rem;
+}
+.header img:hover{
+  cursor: pointer;
+}
+.header{
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+#eye{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,255,255,0.5);
+  padding: 125px;
+  display: none;
+  margin: auto;
+}
+
+.header:hover #eye{
+  display: block;
+}
+.content{
+  padding: 0 0.2rem;
+}
+.content h1{
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: .6rem 0;
+}
+.content h1:hover{
+  color: var(--cyan);
+  cursor: pointer;
+}
+.content p {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 300;
+  color: rgba(256, 256, 256, 0.5);
+  margin: 0.2rem 0 ;
+}
+section{
+  margin: 0.7rem 0 1rem 0;
+}
+.priceinfo{
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  color: var(--cyan);
+  text-transform: uppercase;
+}
+.timeinfo{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: rgba(256, 256, 256, 0.5);
+}
+section img{
+  margin: 0 .3rem;
+}
+.hr{
+  height: 1px;
+}
+hr{
+  margin: 0 auto;
+}
+.footer img{
+  width: 40px;
+  border: 1px ridge white;
+  border-radius: 50%;
+}
+.footer{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: .5rem .1rem;
+}
+.footer p{
+  margin: 0 0.5rem;
+  word-spacing: 0.09rem;
+  color: rgba(256, 256, 256, 0.5);
+}
+span{
+  color: rgba(256, 256, 256, 1);
+}
+span:hover{
+  color: var(--cyan);
+  cursor: pointer;
+}
+
